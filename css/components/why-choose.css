@@ -1,0 +1,39 @@
+/* <why-choose> — Smilora numbered list that swaps the photo */
+:host { display: block; }
+.wrap { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 6vw, 6rem); align-items: center; }
+
+ol { list-style: none; margin: 0; padding: 0; }
+li { border-bottom: var(--hairline-strong); }
+button {
+  width: 100%; display: flex; align-items: baseline; gap: 1rem;
+  padding: 1.4rem 0; background: none; border: 0; cursor: pointer; text-align: left;
+  font: inherit; color: var(--color-dim);
+  transition: color 0.4s var(--ease-out);
+}
+button:hover, [aria-expanded="true"] { color: var(--color-ink); }
+button:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.n { font-size: 1rem; font-variant-numeric: tabular-nums; }
+.t { font-family: var(--font-display); font-weight: var(--fw-medium); font-size: clamp(1.3rem, 2.4vw, 1.9rem); letter-spacing: var(--ls-heading); line-height: 1.15; }
+
+/* Animated height reveal using grid-template-rows */
+.panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.6s var(--ease-out); }
+.panel > div { overflow: hidden; }
+.panel p { padding: 0 0 1.4rem 2.2rem; max-width: 34rem; }
+li.active .panel { grid-template-rows: 1fr; }
+
+.stage { position: relative; border-radius: var(--radius-xl); overflow: hidden; aspect-ratio: 4 / 4.4; background: var(--color-surface-3); }
+.stage img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.12); transition: opacity 0.8s var(--ease-out), transform 1.4s var(--ease-out); }
+.stage img.active { opacity: 1; transform: none; }
+.badge {
+  position: absolute; left: 1rem; bottom: 1rem; z-index: 1;
+  display: flex; align-items: center; gap: 10px;
+  padding: 0.7rem 1rem; border-radius: var(--radius-pill);
+  background: rgb(255 255 255 / 0.85); backdrop-filter: blur(10px);
+  font-size: var(--fs-caption); font-weight: 500;
+}
+.badge app-icon { color: var(--color-accent); }
+
+@media (max-width: 900px) {
+  .wrap { grid-template-columns: 1fr; }
+  .stage { order: -1; aspect-ratio: 16 / 11; }
+}

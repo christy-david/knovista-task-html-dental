@@ -1,0 +1,91 @@
+/* Home hero (Zentore-style full-bleed photo), statement, bento, inner-page heroes */
+
+/* ---- Home hero ---- */
+.hero { padding-block: 0.5rem 0; }
+.hero-media {
+  position: relative; overflow: hidden;
+  min-height: min(88vh, 780px);
+  border-radius: var(--radius-xl);
+  display: flex; align-items: flex-end;
+  color: #fff;
+  isolation: isolate;
+}
+.hero-media > img {
+  position: absolute; inset: 0; z-index: -2;
+  width: 100%; height: 100%; object-fit: cover; object-position: 60% center;
+}
+.hero-media::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background:
+    linear-gradient(90deg, rgb(2 5 16 / 0.72) 0%, rgb(2 5 16 / 0.35) 55%, rgb(2 5 16 / 0.1) 100%),
+    linear-gradient(0deg, rgb(2 5 16 / 0.55) 0%, transparent 45%);
+}
+.hero-inner {
+  width: 100%;
+  display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 2rem;
+  padding: clamp(1.5rem, 5vw, 3.5rem);
+}
+.hero h1 { font-size: var(--fs-display); max-width: 11ch; }
+.hero .eyebrow { color: rgb(255 255 255 / 0.8); }
+.hero .lead { color: rgb(255 255 255 / 0.82); max-width: 34rem; margin-top: 1.25rem; }
+
+/* Glass rating card in the hero corner */
+.glass-card {
+  width: 280px;
+  padding: 1.25rem;
+  border-radius: var(--radius-lg);
+  background: rgb(255 255 255 / 0.14);
+  border: 1px solid var(--color-line-inverse);
+  backdrop-filter: blur(16px);
+  color: #fff;
+}
+.glass-card .score { display: flex; align-items: baseline; gap: 8px; font-family: var(--font-display); font-size: 2.6rem; font-weight: var(--fw-medium); letter-spacing: var(--ls-display); line-height: 1; }
+.glass-card .stars { color: var(--color-star); font-size: 0.9rem; letter-spacing: 2px; }
+.glass-card p { color: rgb(255 255 255 / 0.78); font-size: var(--fs-caption); margin-top: 0.5rem; }
+.avatars { display: flex; margin-top: 1rem; }
+.avatars img { width: 34px; height: 34px; border-radius: 50%; object-fit: cover; border: 2px solid rgb(255 255 255 / 0.9); }
+.avatars img + img { margin-left: -10px; }
+
+/* ---- Statement paragraph (scroll-scrubbed, see data-scrub) ---- */
+.statement { padding-bottom: 3rem; }
+.statement-text {
+  font-family: var(--font-display); font-weight: 500;
+  font-size: var(--fs-statement); line-height: 1.22; letter-spacing: var(--ls-heading);
+  color: var(--color-ink); max-width: 28ch;
+}
+
+/* ---- Bento stats (Zentore) ---- */
+.bento { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: var(--grid-gap); }
+.bento > * { border-radius: var(--radius-lg); padding: 1.5rem; min-height: 300px; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; position: relative; }
+.bento .label { font-size: var(--fs-label); text-transform: uppercase; letter-spacing: var(--ls-caps); font-weight: 500; }
+.bento-blue { background: var(--color-accent); color: #fff; isolation: isolate; }
+.bento-blue img { position: absolute; right: -4%; bottom: -8%; width: 58%; height: 105%; object-fit: cover; border-radius: var(--radius-lg) 0 0 0; z-index: -1; mask-image: linear-gradient(90deg, transparent, #000 35%); }
+.bento-blue h3 { font-size: clamp(1.4rem, 2.4vw, 2rem); max-width: 12ch; }
+.bento-dark { background: var(--color-ink); color: #fff; }
+.bento-light { background: var(--color-surface); }
+.bento-light .label { color: var(--color-accent); }
+.bento .big { font-family: var(--font-display); font-size: clamp(3rem, 6vw, 4.6rem); font-weight: 500; letter-spacing: var(--ls-display); line-height: 1; display: block; font-variant-numeric: tabular-nums; }
+.bento-dark p { color: rgb(255 255 255 / 0.65); font-size: var(--fs-caption); margin-top: 0.75rem; }
+.bento-light p { font-size: var(--fs-caption); margin-top: 0.75rem; }
+
+/* ---- Inner-page hero (Smilora: centred two-tone title) ---- */
+.page-hero { padding-block: clamp(3.5rem, 8vw, 6rem) clamp(2.5rem, 5vw, 4rem); text-align: center; }
+.page-hero h1 { max-width: 16ch; margin-inline: auto; }
+.page-hero .lead { max-width: 34rem; margin: 1.25rem auto 0; }
+.breadcrumb { display: inline-flex; gap: 6px; font-size: var(--fs-caption); color: var(--color-muted); margin-bottom: 1.25rem; }
+.breadcrumb a { color: var(--color-ink); }
+.breadcrumb a:hover { color: var(--color-accent); }
+.page-banner { border-radius: var(--radius-xl); overflow: hidden; height: clamp(240px, 42vw, 520px); }
+.page-banner img { width: 100%; height: 120%; object-fit: cover; }
+
+@media (max-width: 960px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .bento { grid-template-columns: 1fr 1fr; }
+  .bento-blue { grid-column: 1 / -1; }
+}
+@media (max-width: 600px) {
+  .hero-media { min-height: 640px; border-radius: var(--radius-lg); }
+  .glass-card { width: 100%; }
+  .bento > * { min-height: 220px; }
+  .bento-blue img { width: 50%; }
+}

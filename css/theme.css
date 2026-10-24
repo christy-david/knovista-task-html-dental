@@ -1,0 +1,139 @@
+/* ==========================================================================
+   theme.css — global design tokens
+
+   Typography, spacing, radii, hairlines and buttons follow the Smilora
+   Webflow template's design tokens exactly (Manrope, medium-weight headings
+   with tight tracking, 50%-black body copy, 10%-black hairlines, 5/10/20/30
+   radii, 1150px container, responsive type steps at 991/767/479px).
+
+   Colour is a mix: Smilora's sage-and-stone neutrals + Zentore's electric
+   blue accent and blue-black ink for dark surfaces.
+
+   Custom properties inherit through Shadow DOM, so every Web Component
+   picks these up automatically.
+   ========================================================================== */
+:root {
+  /* ---- Colour · Smilora neutrals ---- */
+  --color-bg: #f2f5ef;          /* primary-color   */
+  --color-surface: #ffffff;     /* white           */
+  --color-surface-2: #e9ebe6;   /* white-200       */
+  --color-surface-3: #e0e2dd;   /* grey            */
+  --color-sand: #d0bfaf;        /* card-bg         */
+  --color-ink: #000000;         /* black           */
+  --color-ink-soft: rgb(0 0 0 / 0.8);   /* black-400 */
+  --color-muted: rgb(0 0 0 / 0.5);      /* black-300 — body copy */
+  --color-dim: rgb(0 0 0 / 0.38);       /* grey half of two-tone headings */
+  --color-tint: rgb(0 0 0 / 0.04);      /* black-200 — subtle fills */
+
+  /* ---- Colour · Zentore accent & dark surfaces ---- */
+  --color-accent: #0051ff;
+  --color-accent-hover: #0042d1;
+  --color-accent-soft: #e6eeff;
+  --color-night: #020510;
+
+  /* ---- Hairlines (Smilora border-100 / border-200) ---- */
+  --color-line: rgb(0 0 0 / 0.1);
+  --color-line-strong: rgb(0 0 0 / 0.1);
+  --color-line-inverse: rgb(255 255 255 / 0.2);
+  --hairline: 1px solid var(--color-line);
+  --hairline-strong: 1px solid var(--color-line-strong);
+  --hairline-inverse: 1px solid var(--color-line-inverse);
+
+  /* ---- Functional ---- */
+  --color-whatsapp: #25d366;
+  --color-danger: #d93a1b;
+  --color-success: #12a150;
+  --color-star: #f5b301;
+
+  /* ---- Typography · Smilora ---- */
+  --font-body: "Manrope", system-ui, sans-serif;
+  --font-display: "Manrope", system-ui, sans-serif;
+  --font-accent: "Instrument Serif", Georgia, serif;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --fs-h1: 56px;  --lh-h1: 1.12;  --ls-h1: -2.24px;
+  --fs-h2: 48px;  --lh-h2: 1.18;  --ls-h2: -2.4px;
+  --fs-h3: 32px;  --lh-h3: 1.14;  --ls-h3: -1.6px;
+  --fs-h4: 24px;  --lh-h4: 1.14;  --ls-h4: -1px;
+  --fs-h5: 20px;  --lh-h5: 1.14;
+  --fs-h6: 16px;  --lh-h6: 1.14;
+  --fs-display: var(--fs-h1);
+  --fs-statement: 36px;
+
+  --fs-lead: 18px;
+  --fs-body: 16px;
+  --lh-body: 1.36;
+  --fs-small: 15px;
+  --fs-button: 14px;
+  --fs-caption: 13px;
+  --fs-label: 12px;
+
+  /* em-based tracking for component titles of any size */
+  --ls-heading: -0.05em;
+  --ls-tight: -0.04em;
+  --ls-display: -0.04em;
+  --ls-caps: 0.08em;
+
+  /* ---- Shape · Smilora radii ---- */
+  --radius-xs: 5px;    /* radius-1x */
+  --radius-sm: 10px;   /* radius-2x */
+  --radius-md: 10px;
+  --radius-lg: 20px;   /* common    */
+  --radius-xl: 30px;   /* radius-3x */
+  --radius-pill: 999px;
+
+  /* ---- Spacing · Smilora ---- */
+  --gap-1: 5px;  --gap-2: 8px;  --gap-3: 10px; --gap-4: 12px; --gap-5: 14px;
+  --gap-6: 16px; --gap-7: 20px; --gap-8: 24px; --gap-9: 30px; --gap-10: 32px; --gap-11: 40px;
+  --space-common: 64px;
+  --grid-gap: var(--gap-7);
+  --section-space: 120px;      /* section-spacing m */
+  --section-space-l: 128px;
+  --section-space-s: 60px;
+  --container: 1150px;
+  --page-padding: 15px;        /* container-spacing inner */
+  --header-h: 80px;
+
+  /* ---- Depth ---- */
+  --shadow-soft: 0 1px 2px rgb(0 0 0 / 0.04), 0 12px 32px -12px rgb(0 0 0 / 0.14);
+  --shadow-lift: 0 30px 70px -24px rgb(2 5 16 / 0.4);
+
+  /* ---- Buttons · Smilora ---- */
+  --btn-gradient: linear-gradient(#000, #676767);
+  --btn-gradient-accent: linear-gradient(#0051ff, #3f7dff);
+  --btn-padding: 12px 24px;
+
+  /* ---- Motion (GSAP-style easings) ---- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);     /* expo.out */
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1); /* power3.inOut */
+}
+
+/* Smilora's responsive type steps */
+@media (max-width: 991px) {
+  :root { --ls-h1: -2px; --ls-h2: -2px; --section-space: 100px; }
+}
+@media (max-width: 767px) {
+  :root {
+    --fs-h1: 44px; --ls-h1: -1px;
+    --fs-h2: 40px; --ls-h2: -1px;
+    --fs-h3: 24px; --ls-h3: -1px;
+    --fs-h4: 22px;
+    --fs-statement: 28px;
+    --section-space: 80px;
+  }
+}
+@media (max-width: 479px) {
+  :root {
+    --fs-h1: 34px; --ls-h1: 0px;
+    --fs-h2: 32px; --ls-h2: 0px;
+    --fs-h3: 22px; --ls-h3: 0px;
+    --fs-h4: 20px; --ls-h4: 0px;
+    --fs-statement: 24px;
+    --fs-lead: 16px;
+    --section-space: var(--section-space-s);
+  }
+}

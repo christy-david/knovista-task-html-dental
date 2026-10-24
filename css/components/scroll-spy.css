@@ -1,0 +1,7 @@
+/* <scroll-spy> — a horizontally scrollable row for the slotted links */
+:host {
+  display: flex; gap: 8px;
+  overflow-x: auto; padding: 12px 0;
+  scrollbar-width: none;
+}
+:host::-webkit-scrollbar { display: none; }

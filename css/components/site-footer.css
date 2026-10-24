@@ -1,0 +1,25 @@
+/* <site-footer> */
+:host { display: block; padding: 0 0.5rem 0.5rem; }
+footer { background: var(--color-ink); color: rgb(255 255 255 / 0.6); padding: 4.5rem 0 1.5rem; font-size: var(--fs-small); border-radius: var(--radius-xl); }
+
+.big { display: flex; justify-content: space-between; align-items: flex-end; gap: 2rem; flex-wrap: wrap; padding-bottom: 3rem; margin-bottom: 3rem; border-bottom: 1px solid var(--color-line-inverse); }
+.big h2 { color: #fff; font-size: clamp(2rem, 5vw, 3.4rem); max-width: 14ch; }
+.big h2 .accent { color: #7ea6ff; }
+
+.top { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.3fr; gap: 2.5rem; }
+h4 { color: #fff; font-family: var(--font-body); font-size: var(--fs-label); font-weight: 500; text-transform: uppercase; letter-spacing: var(--ls-caps); margin-bottom: 1rem; }
+ul { list-style: none; display: grid; gap: 0.6rem; }
+li { display: flex; gap: 0.6rem; }
+li app-icon { color: #7ea6ff; margin-top: 0.15em; }
+a { color: rgb(255 255 255 / 0.6); transition: color 0.3s var(--ease-out); }
+a:hover { color: #fff; }
+p { color: rgb(255 255 255 / 0.6); max-width: 24rem; }
+
+.logo { display: flex; align-items: center; gap: 10px; font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; color: #fff; margin-bottom: 1rem; }
+.logo-mark { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; background: var(--color-accent); color: #fff; }
+.logo-mark app-icon { width: 18px; height: 18px; }
+
+.bottom { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding-top: 2.5rem; margin-top: 3rem; border-top: 1px solid var(--color-line-inverse); font-size: var(--fs-caption); }
+
+@media (max-width: 960px) { .top { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .top { grid-template-columns: 1fr; } }

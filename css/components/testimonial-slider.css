@@ -1,0 +1,37 @@
+/* <testimonial-slider> — Smilora big-quote slider */
+:host { display: block; }
+.wrap { display: grid; grid-template-columns: 200px 1fr 170px; gap: clamp(1.5rem, 4vw, 3rem); align-items: end; }
+
+.patient img, .doctor img { width: 100%; object-fit: cover; border-radius: var(--radius-lg); }
+.patient img { aspect-ratio: 1 / 0.95; }
+.doctor { align-self: start; }
+.doctor img { aspect-ratio: 1 / 0.9; }
+.cap { display: flex; justify-content: space-between; margin-top: 0.6rem; font-size: var(--fs-caption); color: var(--color-ink); }
+.doctor .cap { flex-direction: column; }
+.doctor .cap span:last-child { color: var(--color-muted); }
+
+.quote { align-self: center; }
+.quote-icon { color: var(--color-dim); width: 46px; height: 46px; float: left; margin: 0.15em 0.6rem 0 0; }
+blockquote { font-family: var(--font-display); font-weight: 500; font-size: clamp(1.35rem, 2.6vw, 2.1rem); letter-spacing: var(--ls-heading); line-height: 1.22; color: var(--color-ink); }
+.who { margin-top: 1.75rem; }
+.who strong { display: block; font-family: var(--font-display); font-size: 1.2rem; font-weight: var(--fw-medium); letter-spacing: var(--ls-tight); }
+.who span { font-size: var(--fs-caption); color: var(--color-muted); }
+.stars { color: var(--color-star); letter-spacing: 2px; margin-bottom: 1rem; display: flex; gap: 2px; }
+.stars app-icon { width: 16px; height: 16px; }
+
+.slide { transition: opacity 0.5s var(--ease-out), transform 0.7s var(--ease-out); }
+.slide.out { opacity: 0; transform: translateY(16px); }
+
+.nav { display: flex; gap: 0.5rem; justify-content: flex-end; margin-top: 2rem; }
+.count { margin-right: auto; align-self: center; font-size: var(--fs-caption); color: var(--color-muted); font-variant-numeric: tabular-nums; }
+.icon-btn { width: 44px; height: 44px; border-radius: 50%; display: inline-grid; place-items: center; background: var(--color-surface); color: var(--color-ink); border: var(--hairline); cursor: pointer; transition: background-color 0.3s var(--ease-out), color 0.3s; }
+.icon-btn:hover { background: var(--color-ink); color: #fff; }
+.icon-btn app-icon { width: 18px; height: 18px; }
+
+@media (max-width: 900px) {
+  .wrap { grid-template-columns: 1fr; }
+  .patient { display: none; }
+  .doctor { display: flex; align-items: center; gap: 1rem; order: 2; }
+  .doctor img { width: 64px; aspect-ratio: 1; border-radius: 50%; }
+  .doctor .cap { margin: 0; }
+}

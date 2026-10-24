@@ -1,0 +1,32 @@
+/* Electric-blue section with circle-line decoration (Zentore) */
+.section-blue {
+  position: relative; overflow: hidden; isolation: isolate;
+  background: var(--color-accent); color: #fff;
+}
+.section-blue::before, .section-blue::after {
+  content: ""; position: absolute; z-index: -1; border-radius: 50%;
+  border: 1px solid rgb(255 255 255 / 0.16);
+}
+.section-blue::before { width: 900px; height: 900px; left: -260px; top: -200px; }
+.section-blue::after { width: 1200px; height: 1200px; right: -520px; top: -120px; }
+.section-blue .eyebrow { color: rgb(255 255 255 / 0.7); }
+.section-blue p { color: rgb(255 255 255 / 0.8); }
+.section-blue .dim { color: rgb(255 255 255 / 0.55); }
+
+.safety-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--grid-gap); }
+.safety-step { display: flex; flex-direction: column; gap: 6px; }
+.safety-step .step-head {
+  display: flex; align-items: center; gap: 12px;
+  padding: 0.75rem 1rem; border-radius: var(--radius-md);
+  background: #fff; color: var(--color-ink); font-weight: 500;
+}
+.safety-step .step-head app-icon { color: var(--color-accent); width: 1.4em; height: 1.4em; }
+.safety-step .step-head .n { margin-left: auto; font-size: var(--fs-caption); color: var(--color-muted); }
+.safety-step .step-body {
+  flex: 1; padding: 1.25rem; border-radius: var(--radius-md);
+  background: rgb(255 255 255 / 0.1); border: 1px solid var(--color-line-inverse);
+  font-size: var(--fs-small);
+}
+
+@media (max-width: 960px) { .safety-steps { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .safety-steps { grid-template-columns: 1fr; } }

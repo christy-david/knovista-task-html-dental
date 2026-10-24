@@ -1,0 +1,13 @@
+/* Closing call-to-action: photo panel with overlay (Zentore) */
+.cta-panel {
+  position: relative; overflow: hidden; isolation: isolate;
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  padding: clamp(3rem, 9vw, 7rem) clamp(1.5rem, 5vw, 4rem);
+  border-radius: var(--radius-xl);
+  color: #fff;
+}
+.cta-panel > img { position: absolute; inset: 0; width: 100%; height: 120%; object-fit: cover; z-index: -2; }
+.cta-panel::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgb(2 5 16 / 0.55), rgb(2 5 16 / 0.75)); }
+.cta-panel h2 { max-width: 18ch; font-size: clamp(2.2rem, 5vw, 3.8rem); }
+.cta-panel p { color: rgb(255 255 255 / 0.8); max-width: 32rem; margin-top: 1rem; }
+.cta-panel .btn-row { justify-content: center; }

@@ -1,0 +1,29 @@
+/* Reset + document-level defaults */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+html.modal-open { overflow: hidden; }
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--color-ink);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; }
+[id] { scroll-margin-top: calc(var(--header-h) + 64px); }
+:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }
+::selection { background: var(--color-accent); color: #fff; }
+
+/* Reserve space for components before they render (avoids layout shift) */
+site-header { display: block; min-height: var(--header-h); }
+site-footer, opening-hours, booking-form, concern-picker, why-choose,
+before-after, doctor-slider, testimonial-slider, service-rail,
+service-details, team-grid { display: block; }
+app-icon { display: inline-block; width: 1.15em; height: 1.15em; flex-shrink: 0; vertical-align: -0.2em; }
+
+/* Components stay hidden until their own stylesheets have loaded (see BaseComponent) */
+[data-loading] { visibility: hidden; }

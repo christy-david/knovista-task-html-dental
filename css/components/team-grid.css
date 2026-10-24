@@ -1,0 +1,5 @@
+/* <team-grid> */
+:host { display: block; }
+.member .media img { height: 320px; object-position: top; }
+.role { font-size: var(--fs-label); text-transform: uppercase; letter-spacing: var(--ls-caps); color: var(--color-accent); margin-bottom: 0.5rem; }
+.qual { display: inline-flex; align-items: center; gap: 6px; font-size: var(--fs-caption); color: var(--color-muted); }

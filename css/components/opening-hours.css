@@ -1,0 +1,9 @@
+/* <opening-hours> */
+:host { display: block; }
+.status { margin-bottom: 1rem; color: var(--color-ink); font-weight: 500; font-size: var(--fs-small); }
+table { width: 100%; border-collapse: collapse; font-size: var(--fs-small); }
+td { padding: 0.9rem 0; border-bottom: var(--hairline); color: var(--color-muted); }
+tr:first-child td { border-top: var(--hairline); }
+td:last-child { text-align: right; color: var(--color-ink); }
+tr.today td { color: var(--color-ink); font-weight: var(--fw-medium); }
+tr.today td:first-child::after { content: "Today"; margin-left: 8px; padding: 2px 8px; border-radius: var(--radius-pill); background: var(--color-accent); color: #fff; font-size: var(--fs-label); font-weight: 500; }

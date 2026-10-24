@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dental Treatments &amp; Prices | Pearl Smile Dental Clinic, Kochi</title>
+  <meta name="description" content="13 dental treatments with clear starting prices: check-ups, fillings, root canals, wisdom teeth, gum care, braces, aligners, implants, crowns, dentures, kids dentistry, whitening and laser dentistry.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+
+  <site-header></site-header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb" data-animate="fade-up"><a href="index.html">Home</a> / <span>Treatments</span></nav>
+        <h1 data-split="load">Every treatment, <em class="accent">clearly</em> priced</h1>
+        <p class="lead" data-animate="fade-up" data-delay="300">Thirteen treatments under one roof, each with a starting price. You get a written estimate before anything begins.</p>
+      </div>
+    </section>
+
+    <!-- Sticky jump-to navigation; highlights the treatment on screen -->
+    <div class="subnav">
+      <scroll-spy class="container" aria-label="Jump to a treatment">
+        <a class="chip" href="#checkup"><app-icon name="stethoscope"></app-icon> Check-up</a>
+        <a class="chip" href="#fillings"><app-icon name="circle-dot"></app-icon> Fillings</a>
+        <a class="chip" href="#rct"><app-icon name="tooth"></app-icon> Root canal</a>
+        <a class="chip" href="#extraction"><app-icon name="syringe"></app-icon> Wisdom teeth</a>
+        <a class="chip" href="#gum"><app-icon name="heart-pulse"></app-icon> Gum care</a>
+        <a class="chip" href="#braces"><app-icon name="smile"></app-icon> Braces</a>
+        <a class="chip" href="#aligners"><app-icon name="smile-plus"></app-icon> Aligners</a>
+        <a class="chip" href="#implants"><app-icon name="layers"></app-icon> Implants</a>
+        <a class="chip" href="#crowns"><app-icon name="crown"></app-icon> Crowns</a>
+        <a class="chip" href="#dentures"><app-icon name="smile"></app-icon> Dentures</a>
+        <a class="chip" href="#kids"><app-icon name="baby"></app-icon> Kids</a>
+        <a class="chip" href="#cosmetic"><app-icon name="sparkles"></app-icon> Whitening</a>
+        <a class="chip" href="#laser"><app-icon name="zap"></app-icon> Laser</a>
+        <a class="chip" href="#plans"><app-icon name="wallet"></app-icon> Plans</a>
+      </scroll-spy>
+    </div>
+
+    <section style="padding-top:1rem">
+      <div class="container">
+        <!-- Rows are rendered from js/data/site.js -->
+        <service-details></service-details>
+      </div>
+    </section>
+
+    <!-- Plans -->
+    <section class="section-white" id="plans">
+      <div class="container">
+        <div class="section-head center">
+          <span class="eyebrow">Dental health plans</span>
+          <h2 data-split>Save on care <span class="dim">all year round</span></h2>
+          <p class="lead" data-animate="fade-up">One small yearly fee for check-ups, cleanings and discounts on everything above.</p>
+        </div>
+        <div class="plans" data-stagger>
+          <article class="plan" style="background:var(--color-bg)">
+            <div class="plan-head"><h3>Smile Care</h3></div>
+            <div class="plan-price">₹650 <small>/ year</small></div>
+            <p>For individuals who want to stay on top of their oral health.</p>
+            <ul class="checklist">
+              <li><app-icon name="check"></app-icon>Unlimited consultations for a year</li>
+              <li><app-icon name="check"></app-icon>One full cleaning &amp; polishing</li>
+              <li><app-icon name="check"></app-icon>Digital X-ray included</li>
+              <li><app-icon name="check"></app-icon>₹1,800 treatment voucher</li>
+              <li><app-icon name="check"></app-icon>10% off all treatments</li>
+            </ul>
+            <div class="btn-row"><a href="contact.html#book" class="btn btn-light btn-block" data-book="other">Get Smile Care</a></div>
+          </article>
+          <article class="plan plan-featured">
+            <div class="plan-head"><h3>Family Care+</h3><span class="plan-badge">Most popular</span></div>
+            <div class="plan-price">₹750 <small>/ year</small></div>
+            <p>Covers a family of up to four, plus savings on bigger treatments.</p>
+            <ul class="checklist">
+              <li><app-icon name="check"></app-icon>Everything in Smile Care, for 4 people</li>
+              <li><app-icon name="check"></app-icon>Kids' fluoride &amp; sealant check</li>
+              <li><app-icon name="check"></app-icon>₹3,500 off braces, aligners or implants</li>
+              <li><app-icon name="check"></app-icon>Priority weekend appointments</li>
+              <li><app-icon name="check"></app-icon>Lifetime renewal at the same price</li>
+            </ul>
+            <div class="btn-row"><a href="contact.html#book" class="btn btn-accent btn-block" data-book="other">Get Family Care+</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section>
+      <div class="container faq-grid">
+        <div>
+          <span class="eyebrow">FAQ</span>
+          <h2 data-split>About <span class="dim">treatment</span></h2>
+          <p class="lead" data-animate="fade-up">Not sure what you need? <button type="button" class="link-btn" data-book="other">Ask us for advice</button></p>
+        </div>
+        <div class="faq" data-stagger>
+          <details name="faq" open>
+            <summary>Will the treatment hurt? <app-icon name="plus"></app-icon></summary>
+            <p>Most treatments are done under local anaesthesia, so you'll feel pressure but not pain. Laser options make many gum treatments even gentler.</p>
+          </details>
+          <details name="faq">
+            <summary>Are the listed prices final? <app-icon name="plus"></app-icon></summary>
+            <p>They're starting prices. After your consultation you get a written estimate, and nothing is added without your approval.</p>
+          </details>
+          <details name="faq">
+            <summary>How long do implants and aligners take? <app-icon name="plus"></app-icon></summary>
+            <p>Implants usually take about three months from placement to final crown. Aligners typically run 6–12 months depending on your teeth.</p>
+          </details>
+          <details name="faq">
+            <summary>Do you offer EMI or accept insurance? <app-icon name="plus"></app-icon></summary>
+            <p>Yes. No-cost EMI is available on treatments above ₹10,000, and we file insurance claims on your behalf.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="padding-top:0">
+      <div class="container">
+        <div class="cta-panel">
+          <img src="https://images.unsplash.com/photo-1777331903190-341a3dd0441b?w=2000&q=75&auto=format&fit=crop" alt="" data-parallax="0.12">
+          <h2 data-split>Not sure where to <em class="accent">start?</em></h2>
+          <p data-animate="fade-up">Book a free consultation. We'll examine, explain and give you a written estimate.</p>
+          <div class="btn-row" data-stagger>
+            <a href="contact.html#book" class="btn btn-accent btn-lg" data-book="other"><app-icon name="calendar"></app-icon> Ask for advice</a>
+            <a href="tel:+919847012345" class="btn btn-glass btn-lg"><app-icon name="phone"></app-icon> Call us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <site-footer></site-footer>
+  <quick-actions></quick-actions>
+  <booking-dialog></booking-dialog>
+
+
+</body>
+</html>

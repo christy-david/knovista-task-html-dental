@@ -1,0 +1,35 @@
+/* <doctor-slider> — Zentore split slider with 01 / 02 / 03 pager */
+:host { display: block; }
+.wrap { display: grid; grid-template-columns: 1fr 1fr; background: var(--color-surface); border-radius: var(--radius-xl); overflow: hidden; }
+
+.photo { position: relative; min-height: 520px; background: var(--color-surface-3); }
+.photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; opacity: 0; clip-path: inset(0 0 0 100%); transition: opacity 0.1s linear 0.9s, clip-path 0.9s var(--ease-in-out); }
+.photo img.active { opacity: 1; clip-path: inset(0); transition: clip-path 0.9s var(--ease-in-out); z-index: 1; }
+
+.info { display: flex; flex-direction: column; }
+.content { flex: 1; padding: clamp(1.5rem, 4vw, 3.5rem); display: flex; flex-direction: column; justify-content: center; }
+.content > * { transition: opacity 0.5s var(--ease-out), transform 0.6s var(--ease-out); }
+.content.out > * { opacity: 0; transform: translateY(14px); }
+.name { padding-left: 1rem; border-left: 2px solid var(--color-accent); }
+.name h3 { font-size: clamp(1.6rem, 3vw, 2.2rem); }
+.name .role { margin-top: 0.35rem; font-size: var(--fs-label); text-transform: uppercase; letter-spacing: var(--ls-caps); color: var(--color-accent); }
+.spec-label { margin-top: 2.5rem; font-size: var(--fs-label); text-transform: uppercase; letter-spacing: var(--ls-caps); color: var(--color-accent); }
+.spec { font-family: var(--font-display); font-weight: var(--fw-medium); font-size: 1.3rem; letter-spacing: var(--ls-tight); line-height: 1.3; margin-top: 0.5rem; }
+.bio { margin-top: 1rem; font-size: var(--fs-small); max-width: 32rem; }
+.facts { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1.25rem; }
+
+.pager { display: flex; align-items: stretch; border-top: var(--hairline); }
+.pager button.arrow { width: 72px; display: grid; place-items: center; background: none; border: 0; border-right: var(--hairline); cursor: pointer; color: var(--color-ink); transition: background-color 0.3s; }
+.pager button.arrow:hover { background: var(--color-bg); }
+.pager button.arrow app-icon { width: 20px; height: 20px; }
+.dots { display: flex; align-items: center; gap: 1rem; padding: 1.25rem 1.5rem; font-family: var(--font-display); font-size: 1.3rem; font-weight: 500; }
+.dots button { background: none; border: 0; padding: 0; font: inherit; color: var(--color-dim); cursor: pointer; transition: color 0.3s; }
+.dots button[aria-current="true"] { color: var(--color-accent); }
+.dots span { color: var(--color-dim); }
+
+@media (max-width: 860px) {
+  .wrap { grid-template-columns: 1fr; }
+  .photo { min-height: 360px; }
+  .dots { font-size: 1.05rem; gap: 0.6rem; padding: 1rem; }
+  .pager button.arrow { width: 56px; }
+}

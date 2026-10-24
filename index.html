@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pearl Smile Dental Clinic | Specialist Dentists in Kakkanad, Kochi</title>
+  <meta name="description" content="Specialist-led dental care in Kakkanad, Kochi: check-ups, root canals, implants, braces, clear aligners, kids dentistry and whitening. Open 7 days. Book on WhatsApp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+
+  <site-header></site-header>
+
+  <main>
+    <!-- ============ Hero (Zentore: full-bleed photo, serif-italic accents) ============ -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-media">
+          <img src="https://images.unsplash.com/photo-1777331903190-341a3dd0441b?w=2000&q=75&auto=format&fit=crop" alt="" data-animate="scale">
+          <div class="hero-inner">
+            <div>
+              <span class="eyebrow" data-animate="fade-up">Specialist dental care · Kakkanad, Kochi</span>
+              <h1 data-split="load">Smile <em class="accent">brighter.</em> Live <em class="accent">better.</em></h1>
+              <p class="lead" data-animate="fade-up" data-delay="400">From routine check-ups to implants and invisible aligners — gentle, specialist-led dentistry for the whole family, open seven days a week.</p>
+              <div class="btn-row" data-stagger data-delay="550">
+                <a href="contact.html#book" class="btn btn-accent btn-lg" data-book><app-icon name="calendar"></app-icon> Book an appointment</a>
+                <a href="tel:+919847012345" class="btn btn-glass btn-lg"><app-icon name="phone"></app-icon> +91 98470 12345</a>
+              </div>
+            </div>
+            <div class="glass-card" data-animate="fade-left" data-delay="800">
+              <div class="score">4.9
+                <span class="stars" aria-label="5 out of 5 stars"><app-icon name="star"></app-icon><app-icon name="star"></app-icon><app-icon name="star"></app-icon><app-icon name="star"></app-icon><app-icon name="star"></app-icon></span>
+              </div>
+              <p>Rated by 1,200+ patients on Google</p>
+              <div class="avatars">
+                <img src="https://images.unsplash.com/photo-1617812191081-2a24e3f30e45?w=80&q=70&auto=format&fit=crop" alt="">
+                <img src="https://images.unsplash.com/photo-1567516364473-233c4b6fcfbe?w=80&q=70&auto=format&fit=crop" alt="">
+                <img src="https://images.unsplash.com/photo-1489278353717-f64c6ee8a4d2?w=80&q=70&auto=format&fit=crop" alt="">
+                <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=80&q=70&auto=format&fit=crop" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Statement (scroll-scrubbed words) ============ -->
+    <section class="statement">
+      <div class="container">
+        <span class="eyebrow">About Pearl Smile</span>
+        <p class="statement-text" data-scrub>Healthy smiles build confidence. For over fifteen years we've combined specialist expertise, modern technology and honest advice, so every patient gets care that's gentle, safe and clearly explained.</p>
+      </div>
+    </section>
+
+    <!-- ============ Bento stats (Zentore) ============ -->
+    <section style="padding-top:0">
+      <div class="container bento" data-stagger>
+        <div class="bento-blue">
+          <span class="label">Your smile, our priority</span>
+          <img src="https://images.unsplash.com/photo-1593022356769-11f762e25ed9?w=900&q=75&auto=format&fit=crop" alt="Dental implant model">
+          <h3>Healthy smiles for every generation</h3>
+        </div>
+        <div class="bento-dark">
+          <span class="label">Average rating</span>
+          <div>
+            <stat-counter class="big" value="4.9" decimals="1"></stat-counter>
+            <p>From 1,200+ verified Google reviews</p>
+          </div>
+        </div>
+        <div class="bento-light">
+          <span class="label">Patients treated</span>
+          <div>
+            <stat-counter class="big" value="12000" suffix="+"></stat-counter>
+            <p>Families across Kochi since 2009</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ How can we help? (Clove-style concern selector) ============ -->
+    <section style="padding-top:0">
+      <div class="container">
+        <div class="section-head split">
+          <div>
+            <span class="eyebrow">Quick booking</span>
+            <h2 data-split>How can we help you <span class="dim">today?</span></h2>
+          </div>
+          <p class="lead" data-animate="fade-up">Choose what brings you in. The booking form opens with the right treatment already selected.</p>
+        </div>
+        <concern-picker></concern-picker>
+      </div>
+    </section>
+
+    <!-- ============ Treatments rail (Smilora: pinned horizontal scroll) ============ -->
+    <service-rail>
+      <h2 slot="title" data-split>Our dental <span class="dim">treatments</span></h2>
+      <a slot="action" href="services.html" class="btn btn-primary">View all treatments <app-icon name="arrow-up-right"></app-icon></a>
+    </service-rail>
+
+    <!-- ============ Why choose us (Smilora numbered list) ============ -->
+    <section>
+      <div class="container">
+        <div class="section-head center">
+          <h2 data-split>Why patients choose <span class="dim">Pearl Smile</span></h2>
+          <p class="lead" data-animate="fade-up">Specialist expertise, visible safety and honest pricing, from your first call to your last follow-up.</p>
+        </div>
+        <why-choose data-animate="fade-up"></why-choose>
+      </div>
+    </section>
+
+    <!-- ============ Before / after ============ -->
+    <section class="section-white">
+      <div class="container">
+        <div class="section-head center">
+          <h2 data-split>Real results. <span class="dim">Brighter, confident smiles.</span></h2>
+        </div>
+        <before-after data-animate="fade-up"
+          before="https://images.unsplash.com/photo-1670250492416-570b5b7343b1?w=1800&q=75&auto=format&fit=crop"
+          after="https://images.unsplash.com/photo-1670250492416-570b5b7343b1?w=1800&q=75&auto=format&fit=crop"
+          before-filter="sepia(0.6) saturate(1.6) brightness(0.9) hue-rotate(-10deg)"
+          caption="Illustrative whitening preview. Drag the handle to compare.">
+        </before-after>
+      </div>
+    </section>
+
+    <!-- ============ Patient safety (Zentore blue section) ============ -->
+    <section class="section-blue">
+      <div class="container">
+        <div class="section-head split">
+          <div>
+            <span class="eyebrow">Patient safety</span>
+            <h2 data-split>Sterilised in 4 steps. <span class="dim">Every chair, every time.</span></h2>
+          </div>
+          <p class="lead" data-animate="fade-up">Every instrument follows the same audited protocol, and sealed kits are opened in front of you.</p>
+        </div>
+        <div class="safety-steps" data-stagger>
+          <div class="safety-step">
+            <div class="step-head"><app-icon name="spray-can"></app-icon>Clean<span class="n">01</span></div>
+            <div class="step-body"><p>Instruments are scrubbed and run through an ultrasonic cleaner to remove every trace of debris.</p></div>
+          </div>
+          <div class="safety-step">
+            <div class="step-head"><app-icon name="droplets"></app-icon>Disinfect<span class="n">02</span></div>
+            <div class="step-body"><p>Hospital-grade disinfectant for instruments, chairs and every surface you touch.</p></div>
+          </div>
+          <div class="safety-step">
+            <div class="step-head"><app-icon name="flame"></app-icon>Sterilise<span class="n">03</span></div>
+            <div class="step-body"><p>A Class-B vacuum autoclave, the highest standard, kills all bacteria, viruses and spores.</p></div>
+          </div>
+          <div class="safety-step">
+            <div class="step-head"><app-icon name="package"></app-icon>Seal &amp; log<span class="n">04</span></div>
+            <div class="step-body"><p>Kits are sealed in dated pouches and opened in front of you. Every cycle is recorded.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Doctors (Zentore split slider) ============ -->
+    <section>
+      <div class="container">
+        <div class="section-head center">
+          <span class="eyebrow">Meet our doctors</span>
+          <h2 data-split>Specialists for <span class="dim">every kind of care</span></h2>
+        </div>
+        <doctor-slider data-animate="fade-up"></doctor-slider>
+      </div>
+    </section>
+
+    <!-- ============ Journey (Smilora 01–04) ============ -->
+    <section class="section-white">
+      <div class="container">
+        <div class="journey-top">
+          <div>
+            <h2 data-split>Your journey to a <span class="dim">healthier smile</span></h2>
+            <p class="lead" data-animate="fade-up" style="margin-top:1rem">Clear steps, no surprises. Your first consultation and digital X-ray are free.</p>
+            <div class="btn-row" data-animate="fade-up">
+              <a href="contact.html#book" class="btn btn-primary" data-book="checkup"><app-icon name="calendar"></app-icon> Book a free consultation</a>
+            </div>
+          </div>
+          <div class="media-frame" data-animate="clip">
+            <img src="https://images.unsplash.com/photo-1681939282781-341ac4f61996?w=1400&q=75&auto=format&fit=crop" alt="Dentist preparing to examine a patient">
+          </div>
+        </div>
+        <ol class="journey" data-stagger>
+          <li><span class="num">01</span><h3>Book in a minute</h3><p>Online, on WhatsApp or by phone. Pick a time that suits you.</p></li>
+          <li><span class="num">02</span><h3>Free consultation</h3><p>Meet a specialist, share your concerns and ask anything.</p></li>
+          <li><span class="num">03</span><h3>Digital scan &amp; plan</h3><p>3D scans and a written plan with options, timings and costs.</p></li>
+          <li><span class="num">04</span><h3>Care &amp; follow-up</h3><p>Gentle treatment, then check-in calls at 24 hours and 7 days.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ Dental health plans (Clove-style membership) ============ -->
+    <section>
+      <div class="container">
+        <div class="section-head center">
+          <span class="eyebrow">Dental health plans</span>
+          <h2 data-split>Save on care <span class="dim">all year round</span></h2>
+          <p class="lead" data-animate="fade-up">One small yearly fee for check-ups, cleanings and discounts on everything else.</p>
+        </div>
+        <div class="plans" data-stagger>
+          <article class="plan">
+            <div class="plan-head"><h3>Smile Care</h3></div>
+            <div class="plan-price">₹650 <small>/ year</small></div>
+            <p>For individuals who want to stay on top of their oral health.</p>
+            <ul class="checklist">
+              <li><app-icon name="check"></app-icon>Unlimited consultations for a year</li>
+              <li><app-icon name="check"></app-icon>One full cleaning &amp; polishing</li>
+              <li><app-icon name="check"></app-icon>Digital X-ray included</li>
+              <li><app-icon name="check"></app-icon>₹1,800 treatment voucher</li>
+              <li><app-icon name="check"></app-icon>10% off all treatments</li>
+            </ul>
+            <div class="btn-row"><a href="contact.html#book" class="btn btn-light btn-block" data-book="other">Get Smile Care</a></div>
+          </article>
+          <article class="plan plan-featured">
+            <div class="plan-head"><h3>Family Care+</h3><span class="plan-badge">Most popular</span></div>
+            <div class="plan-price">₹750 <small>/ year</small></div>
+            <p>Covers a family of up to four, plus savings on bigger treatments.</p>
+            <ul class="checklist">
+              <li><app-icon name="check"></app-icon>Everything in Smile Care, for 4 people</li>
+              <li><app-icon name="check"></app-icon>Kids' fluoride &amp; sealant check</li>
+              <li><app-icon name="check"></app-icon>₹3,500 off braces, aligners or implants</li>
+              <li><app-icon name="check"></app-icon>Priority weekend appointments</li>
+              <li><app-icon name="check"></app-icon>Lifetime renewal at the same price</li>
+            </ul>
+            <div class="btn-row"><a href="contact.html#book" class="btn btn-accent btn-block" data-book="other">Get Family Care+</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Testimonials (Smilora big quote) ============ -->
+    <section class="section-muted">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Testimonials</span>
+          <h2 data-split>Real patients. <span class="dim">Real smiles.</span></h2>
+        </div>
+        <testimonial-slider></testimonial-slider>
+      </div>
+    </section>
+
+    <!-- ============ Insights (Smilora blog teaser) ============ -->
+    <section>
+      <div class="container">
+        <div class="section-head split">
+          <h2 data-split>Dental <span class="dim">insights</span></h2>
+          <a href="blog.html" class="btn btn-primary" data-animate="fade-up">View all <app-icon name="arrow-up-right"></app-icon></a>
+        </div>
+        <div class="insights" data-stagger>
+          <a class="insight" href="blog.html">
+            <span class="cat">Gum health</span>
+            <div class="media-frame"><img src="https://images.unsplash.com/photo-1657470179447-0f5aa16daa91?w=700&q=75&auto=format&fit=crop" alt="" loading="lazy"></div>
+            <h3>Black tartar: what it is and how to get rid of it</h3>
+          </a>
+          <a class="insight" href="blog.html">
+            <span class="cat">Kids dentistry</span>
+            <div class="media-frame"><img src="https://images.unsplash.com/photo-1626736985932-c0df2ae07a2e?w=700&q=75&auto=format&fit=crop" alt="" loading="lazy"></div>
+            <h3>Thumb sucking and pacifiers: when should parents worry?</h3>
+          </a>
+          <a class="insight" href="blog.html">
+            <span class="cat">Aligners &amp; braces</span>
+            <div class="media-frame"><img src="https://images.unsplash.com/photo-1564420228450-d9a5bc8d6565?w=700&q=75&auto=format&fit=crop" alt="" loading="lazy"></div>
+            <h3>Are clear aligners worth it? An honest guide</h3>
+          </a>
+          <a class="insight" href="blog.html">
+            <span class="cat">Oral surgery</span>
+            <div class="media-frame"><img src="https://images.unsplash.com/photo-1588776813941-dcf9c55e84d2?w=700&q=75&auto=format&fit=crop" alt="" loading="lazy"></div>
+            <h3>Wisdom teeth: 5 signs it's time to see a dentist</h3>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section-white">
+      <div class="container faq-grid">
+        <div>
+          <span class="eyebrow">FAQ</span>
+          <h2 data-split>Questions, <span class="dim">answered</span></h2>
+          <p class="lead" data-animate="fade-up">Can't find yours? Call us on <a href="tel:+919847012345" class="link-btn">+91 98470 12345</a>. A dentist answers our helpline.</p>
+        </div>
+        <div class="faq" data-stagger>
+          <details name="faq" open>
+            <summary>Is the first consultation free? <app-icon name="plus"></app-icon></summary>
+            <p>Yes. Your first consultation with a specialist and a digital X-ray (if needed) are free for new patients.</p>
+          </details>
+          <details name="faq">
+            <summary>Do you treat children and the whole family? <app-icon name="plus"></app-icon></summary>
+            <p>Absolutely. Our paediatric dentist sees children from their first tooth, and our Family Care+ plan covers up to four people.</p>
+          </details>
+          <details name="faq">
+            <summary>Are you open on weekends? <app-icon name="plus"></app-icon></summary>
+            <p>We're open seven days: 9 AM – 8:30 PM Monday to Saturday, and 10 AM – 2 PM on Sundays.</p>
+          </details>
+          <details name="faq">
+            <summary>Do I need to book in advance? <app-icon name="plus"></app-icon></summary>
+            <p>Walk-ins are welcome, but booking ahead means little or no waiting. Dental emergencies are always seen the same day.</p>
+          </details>
+          <details name="faq">
+            <summary>Who will be my treating doctor? <app-icon name="plus"></app-icon></summary>
+            <p>A specialist in the relevant field: an endodontist for root canals, an orthodontist for braces, and so on. You'll meet them at your consultation.</p>
+          </details>
+          <details name="faq">
+            <summary>Do you offer EMI or accept insurance? <app-icon name="plus"></app-icon></summary>
+            <p>Yes. No-cost EMI is available on treatments above ₹10,000, and we file insurance claims on your behalf.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA (Zentore photo panel) ============ -->
+    <section>
+      <div class="container">
+        <div class="cta-panel">
+          <img src="https://images.unsplash.com/photo-1609207825181-52d3214556dd?w=2000&q=75&auto=format&fit=crop" alt="" data-parallax="0.12">
+          <span class="eyebrow" style="color:rgb(255 255 255 / .75)">Open 7 days a week</span>
+          <h2 data-split>Where gentle care meets <em class="accent">exceptional</em> dentistry</h2>
+          <p data-animate="fade-up">Book online in a minute, or call and talk to a dentist right away.</p>
+          <div class="btn-row" data-stagger>
+            <a href="contact.html#book" class="btn btn-accent btn-lg" data-book><app-icon name="calendar"></app-icon> Book an appointment</a>
+            <a href="tel:+919847012345" class="btn btn-glass btn-lg"><app-icon name="phone"></app-icon> Call us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <site-footer></site-footer>
+  <quick-actions></quick-actions>
+  <booking-dialog></booking-dialog>
+
+
+</body>
+</html>

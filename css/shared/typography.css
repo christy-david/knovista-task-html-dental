@@ -1,0 +1,56 @@
+/* Headings, text helpers — Smilora type system.
+   Shared: imported by main.css AND linked by components. */
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+h1, h2, h3, h4, h5, h6, p, ul, ol, figure, blockquote { margin: 0; padding: 0; }
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+app-icon { display: inline-block; width: 1.15em; height: 1.15em; flex-shrink: 0; vertical-align: -0.2em; }
+
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); font-weight: var(--fw-medium); color: inherit; }
+h1 { font-size: var(--fs-h1); line-height: var(--lh-h1); letter-spacing: var(--ls-h1); }
+h2 { font-size: var(--fs-h2); line-height: var(--lh-h2); letter-spacing: var(--ls-h2); }
+h3 { font-size: var(--fs-h3); line-height: var(--lh-h3); letter-spacing: var(--ls-h3); }
+h4 { font-size: var(--fs-h4); line-height: var(--lh-h4); letter-spacing: var(--ls-h4); }
+h5 { font-size: var(--fs-h5); line-height: var(--lh-h5); }
+h6 { font-size: var(--fs-h6); line-height: var(--lh-h6); }
+
+/* Body copy: black at 50% (Smilora) */
+p { color: var(--color-muted); font-size: var(--fs-body); line-height: var(--lh-body); }
+.lead { font-size: var(--fs-lead); color: var(--color-muted); }
+
+/* Two-tone heading (Smilora): <h2>Our dental <span class="dim">services</span></h2> */
+.dim { color: var(--color-dim); }
+
+/* Serif-italic accent word: <h1>Smile <em class="accent">brighter</em></h1> */
+.accent { font-family: var(--font-accent); font-style: italic; font-weight: 400; letter-spacing: -0.01em; }
+
+/* Uppercase eyebrow (Zentore colour, Smilora type) */
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: var(--fs-label);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--gap-6);
+}
+
+/* Small pill tag */
+.tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 10px; border-radius: var(--radius-pill);
+  background: var(--color-surface-2); color: var(--color-ink);
+  font-size: var(--fs-label); font-weight: var(--fw-medium);
+}
+
+/* "• STARTING ₹800" price meta (Smilora) */
+.price-meta { font-size: var(--fs-caption); text-transform: uppercase; color: var(--color-muted); white-space: nowrap; }
+.price-meta::before { content: "• "; color: var(--color-ink); }
+.price-meta strong { color: var(--color-ink); font-weight: var(--fw-semibold); }
+
+/* Live "open now" indicator */
+.status { display: inline-flex; align-items: center; gap: 8px; font-size: var(--fs-caption); font-weight: var(--fw-medium); }
+.status i { width: 8px; height: 8px; border-radius: 50%; background: var(--color-danger); }
+.status.is-open i { background: var(--color-success); box-shadow: 0 0 0 4px rgb(18 161 80 / 0.18); }

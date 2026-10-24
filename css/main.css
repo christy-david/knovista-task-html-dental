@@ -1,0 +1,32 @@
+/* ==========================================================================
+   main.css — master stylesheet (the only <link> in each page)
+   Pulls in every page-level CSS module via native @import.
+
+   Web Components do NOT use this file: their Shadow DOM is encapsulated,
+   so each component adopts its own sheets from css/components/ (plus any
+   css/shared/ modules it needs). Only the tokens in theme.css cross the
+   shadow boundary, because CSS custom properties inherit.
+   ========================================================================== */
+
+/* Global tokens + base */
+@import url("theme.css");
+@import url("base.css");
+
+/* Shared modules (also adopted by components that need them) */
+@import url("shared/typography.css");
+@import url("shared/layout.css");
+@import url("shared/buttons.css");
+@import url("shared/card.css");
+@import url("shared/chips.css");
+
+/* Page sections */
+@import url("sections/hero.css");
+@import url("sections/features.css");
+@import url("sections/safety.css");
+@import url("sections/services.css");
+@import url("sections/stats.css");
+@import url("sections/cta.css");
+@import url("sections/blog.css");
+@import url("sections/faq.css");
+@import url("sections/contact.css");
+@import url("sections/motion.css");

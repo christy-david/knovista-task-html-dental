@@ -1,0 +1,34 @@
+/* <concern-picker> — "How can we help you today?" tiles */
+:host { display: block; }
+.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--grid-gap); }
+button {
+  position: relative; overflow: hidden; isolation: isolate;
+  display: flex; flex-direction: column; align-items: flex-start; gap: 2rem;
+  padding: 1.25rem; min-height: 11rem;
+  background: var(--color-surface); border: 0; border-radius: var(--radius-lg);
+  font: inherit; text-align: left; color: var(--color-ink); cursor: pointer;
+  transition: color 0.5s var(--ease-out), transform 0.5s var(--ease-out);
+}
+/* Fill wipes up from the bottom on hover */
+button::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: var(--color-accent);
+  transform: translateY(101%); transition: transform 0.6s var(--ease-out);
+}
+button:hover { color: #fff; }
+button:hover::before { transform: none; }
+button:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }
+
+.icon { width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; background: var(--color-accent-soft); color: var(--color-accent); transition: background-color 0.5s var(--ease-out), color 0.5s; }
+.icon app-icon { width: 22px; height: 22px; }
+button:hover .icon { background: #fff; }
+.label { font-family: var(--font-display); font-weight: var(--fw-medium); font-size: 1.1rem; letter-spacing: var(--ls-tight); margin-top: auto; }
+.hint { display: flex; align-items: center; gap: 6px; font-size: var(--fs-caption); opacity: 0.6; }
+.arrow { position: absolute; top: 1.25rem; right: 1.25rem; width: 20px; height: 20px; transition: transform 0.5s var(--ease-out); }
+button:hover .arrow { transform: rotate(45deg); }
+
+@media (max-width: 960px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 420px) {
+  button { min-height: 9rem; gap: 1rem; }
+  .label { font-size: 1rem; }
+}

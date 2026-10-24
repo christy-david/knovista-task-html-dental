@@ -1,0 +1,90 @@
+/* ==========================================================================
+   Buttons — one system for the whole site. Shared with components.
+
+   Roles (solid fills, no gradients):
+     .btn-accent   Blue   — the main booking call-to-action
+     .btn-primary  Black  — in-content actions (Book this, View all, Read)
+     .btn-light    White  — secondary actions (Call, alternatives)
+     .btn-glass    Glass  — secondary actions on top of photos
+     .btn-whatsapp Green  — WhatsApp only
+
+   Sizes (fixed heights so every row of buttons lines up):
+     .btn-sm 36px · .btn (default) 44px · .btn-lg 52px
+
+   Icons: leading icon for actions (calendar = book, phone = call),
+   trailing arrow for navigation ("View all →").
+   Hover: Smilora's rolling label (see js/lib/buttons.js).
+   ========================================================================== */
+.btn {
+  --btn-h: 44px;
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--gap-2);
+  height: var(--btn-h); padding: 0 22px;
+  border-radius: var(--radius-pill);
+  border: 1px solid transparent;
+  font: inherit; font-family: var(--font-body);
+  font-size: var(--fs-button); font-weight: var(--fw-medium); line-height: 1;
+  cursor: pointer; text-decoration: none; white-space: nowrap;
+  transition: background-color 0.35s var(--ease-out), border-color 0.35s var(--ease-out), color 0.35s var(--ease-out), transform 0.35s var(--ease-out);
+}
+.btn:active { transform: scale(0.97); }
+.btn:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }
+.btn app-icon { width: 16px; height: 16px; transition: transform 0.5s var(--ease-out); }
+.btn:hover app-icon[name="arrow-up-right"] { transform: translate(2px, -2px); }
+.btn:hover app-icon[name="arrow-right"] { transform: translateX(3px); }
+
+.btn-sm { --btn-h: 36px; padding: 0 16px; font-size: var(--fs-caption); }
+.btn-lg { --btn-h: 52px; padding: 0 28px; font-size: var(--fs-small); }
+.btn-lg app-icon { width: 18px; height: 18px; }
+.btn-block { width: 100%; }
+
+/* Rolling label (markup added by App.rollButtons) */
+.roll { display: inline-block; height: 1.36em; line-height: 1.36; overflow: hidden; }
+.roll-inner { display: block; transition: transform 0.55s var(--ease-out); }
+.roll-inner::after { content: attr(data-text); content: attr(data-text) / ""; display: block; }
+.btn:hover .roll-inner { transform: translateY(-50%); }
+
+/* ---- Roles ---- */
+.btn-accent { background: var(--color-accent); color: #fff; }
+.btn-accent:hover { background: var(--color-accent-hover); }
+
+.btn-primary { background: var(--color-ink); color: #fff; }
+.btn-primary:hover { background: #262a33; }
+
+.btn-light { background: var(--color-surface); color: var(--color-ink); border-color: var(--color-line); }
+.btn-light:hover { border-color: var(--color-ink); }
+
+.btn-glass { background: rgb(255 255 255 / 0.12); color: #fff; border-color: var(--color-line-inverse); backdrop-filter: blur(12px); }
+.btn-glass:hover { background: rgb(255 255 255 / 0.22); }
+
+.btn-whatsapp { background: var(--color-whatsapp); color: #fff; }
+.btn-whatsapp:hover { background: #1fb457; }
+
+/* Row of buttons */
+.btn-row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--gap-4); margin-top: var(--gap-10); }
+
+/* Round icon button (slider arrows) */
+.icon-btn {
+  width: 44px; height: 44px; border-radius: 50%;
+  display: inline-grid; place-items: center;
+  background: var(--color-surface); color: var(--color-ink);
+  border: var(--hairline); cursor: pointer;
+  transition: background-color 0.35s var(--ease-out), color 0.35s var(--ease-out), border-color 0.35s var(--ease-out);
+}
+.icon-btn:hover { background: var(--color-ink); border-color: var(--color-ink); color: #fff; }
+.icon-btn:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.icon-btn:disabled { opacity: 0.4; cursor: default; background: var(--color-surface); color: var(--color-ink); }
+
+/* Text links */
+.link-arrow { display: inline-flex; align-items: center; gap: 6px; font-weight: var(--fw-medium); font-size: var(--fs-small); color: var(--color-ink); }
+.link-arrow:hover { color: var(--color-accent); }
+button.link-arrow { background: none; border: 0; padding: 0; font: inherit; font-weight: var(--fw-medium); cursor: pointer; }
+.link-arrow app-icon { width: 16px; height: 16px; transition: transform 0.4s var(--ease-out); }
+.link-arrow:hover app-icon { transform: translateX(3px); }
+.link-btn { background: none; border: 0; padding: 0; font: inherit; font-weight: var(--fw-medium); color: var(--color-accent); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+
+@media (max-width: 600px) {
+  .btn-row .btn { flex: 1 1 auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn:hover .roll-inner { transform: none; }
+}

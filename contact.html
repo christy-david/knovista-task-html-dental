@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &amp; Book | Pearl Smile Dental Clinic, Kochi</title>
+  <meta name="description" content="Call, WhatsApp or email Pearl Smile Dental Clinic, Kakkanad, Kochi. Open 7 days. Address, opening hours, map and online booking.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+
+  <site-header></site-header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb" data-animate="fade-up"><a href="index.html">Home</a> / <span>Contact</span></nav>
+        <h1 data-split="load">Book a visit that fits <em class="accent">your</em> week</h1>
+        <p class="lead" data-animate="fade-up" data-delay="300">Open seven days. Pick whatever's easiest, and we'll confirm within the hour.</p>
+      </div>
+    </section>
+
+    <!-- One-tap contact options -->
+    <section style="padding-top:0;padding-bottom:0">
+      <div class="container grid grid-4" data-stagger>
+        <a class="action-card" href="tel:+919847012345">
+          <span class="icon-chip"><app-icon name="phone"></app-icon></span>
+          <strong>Call us</strong>
+          <span>+91 98470 12345<br>0484 240 1234 (landline)</span>
+          <em>Tap to call <app-icon name="arrow-up-right"></app-icon></em>
+        </a>
+        <a class="action-card" href="https://wa.me/919847012345?text=Hi%2C%20I%20would%20like%20to%20book%20a%20dental%20appointment" target="_blank" rel="noopener">
+          <span class="icon-chip"><app-icon name="whatsapp"></app-icon></span>
+          <strong>WhatsApp</strong>
+          <span>+91 98470 12345</span>
+          <em>Start a chat <app-icon name="arrow-up-right"></app-icon></em>
+        </a>
+        <a class="action-card" href="mailto:hello@pearlsmiledental.in">
+          <span class="icon-chip"><app-icon name="mail"></app-icon></span>
+          <strong>Email</strong>
+          <span>hello@pearlsmiledental.in</span>
+          <em>Write to us <app-icon name="arrow-up-right"></app-icon></em>
+        </a>
+        <a class="action-card" href="https://www.google.com/maps/search/?api=1&amp;query=Kakkanad%2C%20Kochi%2C%20Kerala" target="_blank" rel="noopener">
+          <span class="icon-chip"><app-icon name="map-pin"></app-icon></span>
+          <strong>Visit us</strong>
+          <span>2nd Floor, Lakeview Plaza, Seaport–Airport Road, Kakkanad, Kochi 682030</span>
+          <em>Get directions <app-icon name="arrow-up-right"></app-icon></em>
+        </a>
+      </div>
+    </section>
+
+    <section id="book">
+      <div class="container grid grid-2" style="align-items:start">
+        <!-- Inline booking form (same component as the pop-up) -->
+        <div class="panel" data-animate="fade-up">
+          <span class="eyebrow">Book online</span>
+          <h2 style="font-size:2rem;margin-bottom:.5rem">Request an appointment</h2>
+          <p style="margin-bottom:1.75rem">Your request opens in WhatsApp, ready to send. Your first consultation is free.</p>
+          <booking-form></booking-form>
+        </div>
+
+        <div data-animate="fade-up" data-delay="150">
+          <span class="eyebrow">Opening hours</span>
+          <h2 style="font-size:2rem;margin-bottom:1.25rem">When to find us</h2>
+          <opening-hours></opening-hours>
+
+          <h3 style="margin-top:2.5rem">Address</h3>
+          <address>
+            <ul class="info-list">
+              <li><app-icon name="map-pin"></app-icon><span>Pearl Smile Dental Clinic, 2nd Floor, Lakeview Plaza, Seaport–Airport Road, Kakkanad, Kochi, Kerala 682030</span></li>
+              <li><app-icon name="phone"></app-icon><a href="tel:+919847012345">+91 98470 12345</a></li>
+              <li><app-icon name="mail"></app-icon><a href="mailto:hello@pearlsmiledental.in">hello@pearlsmiledental.in</a></li>
+              <li><app-icon name="circle-parking"></app-icon><span>Free parking in the basement</span></li>
+              <li><app-icon name="accessibility"></app-icon><span>Lift and wheelchair access</span></li>
+            </ul>
+          </address>
+
+          <iframe class="map" title="Map to Pearl Smile Dental Clinic, Kakkanad" src="https://maps.google.com/maps?q=Kakkanad%2C%20Kochi%2C%20Kerala&amp;z=14&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-white">
+      <div class="container faq-grid">
+        <div>
+          <span class="eyebrow">Before you visit</span>
+          <h2 data-split>Good to <span class="dim">know</span></h2>
+        </div>
+        <div class="faq" data-stagger>
+          <details name="faq" open>
+            <summary>Do I need an appointment, or can I walk in? <app-icon name="plus"></app-icon></summary>
+            <p>Walk-ins are welcome, but booking ahead means little or no waiting. Emergencies are always seen the same day.</p>
+          </details>
+          <details name="faq">
+            <summary>Is the first consultation free? <app-icon name="plus"></app-icon></summary>
+            <p>Yes. New patients get a free specialist consultation and a digital X-ray if needed.</p>
+          </details>
+          <details name="faq">
+            <summary>What should I bring to my first visit? <app-icon name="plus"></app-icon></summary>
+            <p>Any previous dental X-rays or reports, a list of medicines you take, and your insurance card if you have one.</p>
+          </details>
+          <details name="faq">
+            <summary>How do I reschedule or cancel? <app-icon name="plus"></app-icon></summary>
+            <p>Reply to your confirmation message on WhatsApp, or call us, ideally a few hours in advance.</p>
+          </details>
+          <details name="faq">
+            <summary>Which payment methods do you accept? <app-icon name="plus"></app-icon></summary>
+            <p>Cash, UPI (GPay, PhonePe, Paytm), all major cards, and no-cost EMI on treatments above ₹10,000.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <site-footer></site-footer>
+  <quick-actions></quick-actions>
+  <booking-dialog></booking-dialog>
+
+
+</body>
+</html>
